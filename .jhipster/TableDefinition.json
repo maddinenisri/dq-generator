@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "columnDefinitions",
+            "otherEntityName": "columnDefinition",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "tableDefinition"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "schemaName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170929015349",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "table_definition",
+    "jpaMetamodelFiltering": true,
+    "pagination": "no"
+}

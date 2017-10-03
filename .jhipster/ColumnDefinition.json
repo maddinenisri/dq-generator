@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tableDefinition",
+            "otherEntityName": "tableDefinition",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "columnName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "columnType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "pkColumnOrder",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170929015810",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "column_definition",
+    "jpaMetamodelFiltering": true,
+    "pagination": "no"
+}

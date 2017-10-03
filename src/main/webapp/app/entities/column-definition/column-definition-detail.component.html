@@ -1,0 +1,39 @@
+
+<div *ngIf="columnDefinition">
+    <h2><span>Column Definition</span> {{columnDefinition.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Column Name</span></dt>
+        <dd>
+            <span>{{columnDefinition.columnName}}</span>
+        </dd>
+        <dt><span>Column Type</span></dt>
+        <dd>
+            <span>{{columnDefinition.columnType}}</span>
+        </dd>
+        <dt><span>Pk Column Order</span></dt>
+        <dd>
+            <span>{{columnDefinition.pkColumnOrder}}</span>
+        </dd>
+        <dt><span>Table Definition</span></dt>
+        <dd>
+            <div *ngIf="columnDefinition.tableDefinition">
+                <a [routerLink]="['/table-definition', columnDefinition.tableDefinition?.id]">{{columnDefinition.tableDefinition?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'column-definition/'+ columnDefinition.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
