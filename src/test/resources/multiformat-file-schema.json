@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "defaultSchema": "NA",
+  "schemas": [
+    {
+      "name": "sample",
+      "type": "custom",
+      "factory": "com.mdstech.dq.datavirtualizr.engine.adapter.multiformatfile.MultiFormatFileSchemaFactory",
+      "operand": {
+        "file":"multiline.csv",
+        "tables":[
+          {
+            "name": "Table1",
+            "delimiter": "|",
+            "filter": {
+              "sw": "20"
+            },
+            "dictionary": [
+              {
+                "name":"Field1",
+                "type":"int"
+              },
+              {
+                "name":"Field2",
+                "type":"string"
+              },
+              {
+                "name":"Field3",
+                "type":"double"
+              },
+              {
+                "name":"Field4",
+                "type":"int"
+              }
+            ]
+          },
+          {
+            "name": "Table3",
+            "delimiter": "|",
+            "filter": {
+              "sw": "10"
+            },
+            "dictionary": [
+              {
+                "name":"Field1",
+                "type":"int"
+              },
+              {
+                "name":"Field2",
+                "type":"string"
+              },
+              {
+                "name":"Field3",
+                "type":"double"
+              },
+              {
+                "name":"Field4",
+                "type":"int"
+              },
+              {
+                "name":"Field5",
+                "type":"int"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sample1",
+      "type": "custom",
+      "factory": "com.mdstech.dq.datavirtualizr.engine.adapter.multiformatfile.MultiFormatFileSchemaFactory",
+      "operand": {
+        "file":"tgt_multiline.csv",
+        "tables":[
+          {
+            "name": "Table2",
+            "delimiter": "|",
+            "filter": {
+              "sw": "20"
+            },
+            "dictionary": [
+              {
+                "name":"Field1",
+                "type":"int"
+              },
+              {
+                "name":"Field2",
+                "type":"string"
+              },
+              {
+                "name":"Field3",
+                "type":"double"
+              },
+              {
+                "name":"Field4",
+                "type":"int"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
