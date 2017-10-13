@@ -1,0 +1,34 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="schemaName">Schema Name</label>
+            <input type="text" class="form-control" id="name" name="schemaName" [(ngModel)]="schemaName" required>
+        </div>
+        <button type="submit" class="btn btn-success" (click)="goNext()">Next</button>
+    </form>
+    <div class="row">
+        <div class="col-2">
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
+        </div>
+        <div class="col-10">
+            <p-dataTable #dt [value]="columns" [editable]="true">
+                <p-column field="columnName" header="Column Name" [editable]="true"></p-column>
+                <p-column field="dataType" header="Data Type" [editable]="true"></p-column>
+                <p-column field="constraint" header="Constraint" [editable]="true"></p-column>
+                <!-- <p-column>
+                    <ng-template let-column="rowData" let-i="rowIndex" pTemplate="body">
+                        <button type="button" pButton (click)="addColumn(dt)" icon="fa-plus">Add Column</button>
+                    </ng-template>
+                </p-column> -->
+            </p-dataTable>
+            <button (click)="addColumn(dt)"><i class="fa fa-plus"></i></button>
+            <!-- <table>
+
+            </table> -->
+        </div>
+    </div>
+</div>
